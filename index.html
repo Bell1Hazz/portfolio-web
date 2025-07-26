@@ -1,22 +1,101 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portofolio Saya</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Saya</title>
+    <link rel="stylesheet" href="style.css" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
 </head>
 <body>
-  <header>
-    <h1>Halo, saya Bell Hazz</h1>
-    <p>Developer | Siswa RPL | Calon Web & App Developer di Austria 🇦🇹</p>
-  </header>
+    <nav>
+        <ul>
+            <li><a href="#beranda">Beranda</a></li>
+            <li><a href="#tentang">Tentang</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#proyek">Proyek</a></li>
+        </ul>
+    </nav>
 
-  <section id="projects">
-    <h2>Proyek Saya</h2>
-    <div id="project-list"></div>
-  </section>
+    <section id="beranda" class="section">
+        <div class="beranda-container">
+            <img src="images/foto-kamu.jpg" alt="Foto Saya">
+            <div class="text">
+                <h1>Halo, saya <span>Abel Hazza</span></h1>
+                <p>Seorang Web Developer & App Developer yang suka membangun hal keren</p>
+            </div>
+        </div>
+    </section>
 
-  <script type="module" src="firebase.js"></script>
+    <section id="tentang" class="section">
+        <h2>Tentang Saya</h2>
+        <p>Saya adalah seorang pengembang perangkat lunak asal Indonesia yang memiliki minat besar di bidang pengembangan website dan aplikasi. Fokus utama saya saat ini adalah memperdalam pemahaman serta keterampilan teknis dalam berbagai teknologi frontend maupun backend, termasuk framework modern, integrasi database, dan praktik pengembangan yang efisien serta berorientasi pada pengguna.
+
+Seiring berkembangnya dunia teknologi global, saya berkomitmen untuk terus belajar dan mengikuti tren industri terbaru agar dapat menciptakan solusi digital yang relevan, fungsional, dan berdampak. Selain mengasah kemampuan teknis, saya juga aktif membangun portofolio sebagai bentuk nyata dari proses pembelajaran saya.
+
+Tujuan jangka panjang saya adalah membangun karier profesional di Austria sebagai seorang developer. Saya tertarik dengan lingkungan kerja di Eropa yang kolaboratif, terbuka terhadap inovasi, serta menantang secara teknis. Dengan semangat belajar yang tinggi dan dedikasi terhadap kualitas, saya berharap dapat berkontribusi dalam tim pengembang internasional dan terus berkembang sebagai profesional di bidang teknologi informasi.</p>
+    </section>
+
+    <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-container">
+        <div class="skill-card" data-title="PHP" 
+             data-desc="PHP adalah bahasa scripting server‑side yang banyak dipakai untuk membangun aplikasi web dinamis.">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP">
+            <p>PHP</p>
+        </div>
+        <div class="skill-card" data-title="JavaScript"
+             data-desc="JavaScript adalah bahasa pemrograman client‑side yang menghidupkan interaksi di web.">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+            <p>JavaScript</p>
+        </div>
+        <div class="skill-card" data-title="Kotlin"
+            data-desc="Kotlin adalah bahasa modern untuk Android & backend, interoperable dengan Java.">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="Kotlin">
+            <p>Kotlin</p>
+        </div>
+       <div class="skill-card" data-title="MySQL"
+             data-desc="MySQL adalah sistem manajemen basis data relasional open‑source yang populer.">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
+    <p>MySQL</p>
+    </div>
+    <div class="skill-card" data-title="Firebase"
+     data-desc="Firebase adalah platform Google untuk backend realtime, auth, storage, dan lainnya.">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase">
+    <p>Firebase</p>
+</div>
+
+    </div>
+</section>
+
+
+    <section id="proyek" class="section">
+        <h2>Proyek</h2>
+        <div class="project-list">
+            <div class="project-card">
+                <h3>Game Store Website</h3>
+                <p>Website CRUD Laravel untuk jual beli game dengan fitur katalog, keranjang, dan wishlist.</p>
+            </div>
+            <div class="project-card">
+                <h3>Aplikasi Voting OSIS</h3>
+                <p>Aplikasi Android berbasis Firebase untuk pemilihan ketua OSIS dengan multi-role login.</p>
+            </div>
+            <!-- Tambahkan proyek lain di sini -->
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Abel Hazza | Dibuat dengan niat dan semangat belajar</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <!-- Modal Overlay -->
+<div id="skill-modal" class="modal">
+  <div class="modal-content">
+    <span id="modal-close">&times;</span>
+    <h3 id="modal-title"></h3>
+    <p id="modal-desc"></p>
+  </div>
+</div>
+
 </body>
 </html>
