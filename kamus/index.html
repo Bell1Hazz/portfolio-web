@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kamus Bahasa Inggris</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Kamus Bahasa Inggris</h1>
+    <label class="toggle-switch">
+      <input type="checkbox" id="darkModeToggle" onchange="toggleDarkMode()" />
+      <span class="slider"></span> 🌙
+    </label>
+    <input type="text" id="search" placeholder="Ketik kata dalam bahasa Inggris" />
+    <button onclick="searchWord()">Cari</button>
+    <button onclick="getRandomWord()">Kata Acak</button>
+    <div id="result" class="result"></div>
+    <h3>Riwayat Pencarian</h3>
+    <ul id="history"></ul>
+    <button onclick="clearHistory()">Hapus Riwayat</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

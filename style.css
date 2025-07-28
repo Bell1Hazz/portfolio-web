@@ -153,19 +153,58 @@ nav ul li a.active {
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 25px;
 }
-
 .project-card {
-  background: #ffffff;
-  border-radius: 14px;
-  padding: 25px 20px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.07);
-  transition: transform 0.3s ease;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 20px;
+  transition: 0.3s;
+  background-color: white;
+  cursor: pointer;
+}
+
+.project-card img.project-thumbnail {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 12px;
 }
 
 .project-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+
+/* Untuk proyek yang belum aktif */
+.project-card.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.project-card.disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+.project-card.clickable {
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-card.clickable:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+
+
+.project-thumbnail {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
 
 .project-card h3 {
   color: #1abc9c;
@@ -243,4 +282,10 @@ footer {
   padding: 24px;
   font-size: 0.9rem;
   margin-top: 80px;
+}
+#typing {
+  font-family: 'Courier New', monospace;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #333;
 }
