@@ -22,7 +22,7 @@ function searchWord(wordParam = null) {
           meaningsHtml += `
             <p class="definition">🔹 ${def.definition}</p>
             ${def.example ? `<p class="example">✏️ ${def.example}</p>` : ""}
-            <button onclick="copyToClipboard('${def.definition.replace(/'/g, "\'")}')">📋 Salin Arti</button>
+            <button onclick="copyToClipboard('${def.definition.replace(/'/g, "\'")}')">📋 Salin </button>
           `;
         });
       });
