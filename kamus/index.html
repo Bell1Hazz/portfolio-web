@@ -1,26 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Kamus Bahasa Inggris</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kamus Bahasa Inggris - Abel Hazza</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Background -->
+  <div class="stars"></div>
+  
   <div class="container">
-    <h1>Kamus Bahasa Inggris</h1>
-    <label class="toggle-switch">
-      <input type="checkbox" id="darkModeToggle" onchange="toggleDarkMode()" />
-      <span class="slider"></span> 🌙
-    </label>
-    <input type="text" id="search" placeholder="Ketik kata dalam bahasa Inggris" />
-    <button onclick="searchWord()">Cari</button>
-    <button onclick="getRandomWord()">Kata Acak</button>
-    <div id="result" class="result"></div>
-    <h3>Riwayat Pencarian</h3>
-    <ul id="history"></ul>
-    <button onclick="clearHistory()">Hapus Riwayat</button>
+    <!-- Header -->
+    <div class="header">
+  <button onclick="window.location.href='../index.html'" class="back-btn">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M19 12H5M12 5l-7 7 7 7"/>
+    </svg>
+    Kembali ke Portfolio
+  </button>
+      <h1 class="title">
+        <span class="icon">📖</span>
+        Kamus Bahasa Inggris
+      </h1>
+      <p class="subtitle">Temukan arti kata dalam bahasa Inggris dengan cepat dan mudah</p>
+    </div>
+
+    <!-- Search Section -->
+    <div class="search-section">
+      <div class="search-box">
+        <input type="text" id="search" placeholder="Ketik kata dalam bahasa Inggris..." onkeypress="if(event.key==='Enter') searchWord()">
+        <button onclick="searchWord()" class="search-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.35-4.35"></path>
+          </svg>
+          Cari
+        </button>
+      </div>
+      <button onclick="getRandomWord()" class="random-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect>
+          <line x1="7" y1="7" x2="7.01" y2="7"></line>
+          <line x1="12" y1="7" x2="12.01" y2="7"></line>
+          <line x1="17" y1="7" x2="17.01" y2="7"></line>
+          <line x1="7" y1="12" x2="7.01" y2="12"></line>
+          <line x1="12" y1="12" x2="12.01" y2="12"></line>
+          <line x1="17" y1="12" x2="17.01" y2="12"></line>
+          <line x1="7" y1="17" x2="7.01" y2="17"></line>
+          <line x1="12" y1="17" x2="12.01" y2="17"></line>
+          <line x1="17" y1="17" x2="17.01" y2="17"></line>
+        </svg>
+        Kata Acak
+      </button>
+    </div>
+
+    <!-- Result Section -->
+    <div class="result-card" id="result">
+      <div class="placeholder">
+        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+        </svg>
+        <p>Cari kata untuk melihat artinya</p>
+      </div>
+    </div>
+
+    <!-- History Section -->
+    <div class="history-section">
+      <div class="history-header">
+        <h3>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 3v18h18"></path>
+            <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"></path>
+          </svg>
+          Riwayat Pencarian
+        </h3>
+        <button onclick="clearHistory()" class="clear-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="3 6 5 6 21 6"></polyline>
+            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+          </svg>
+          Hapus Semua
+        </button>
+      </div>
+      <ul id="history" class="history-list"></ul>
+    </div>
   </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Abel Hazza | Kamus Bahasa Inggris</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>

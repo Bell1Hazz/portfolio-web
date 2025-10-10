@@ -3,158 +3,406 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio Saya</title>
-    <link rel="stylesheet" href="style.css" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
+    <title>Abel Hazza - Portfolio Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
+
 <body>
-    <nav>
-        <ul>
-            <li><a href="#beranda">Beranda</a></li>
-            <li><a href="#tentang">Tentang</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#proyek">Proyek</a></li>
-        </ul>
+    <body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <h2 class="loading-title">Bentar Kok</h2>
+            <p class="loading-subtitle">Loading Portfolio...</p>
+        </div>
+    </div>
+
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="stars"></div>
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="brand-text">Abel Hazza</span>
+            </div>
+            
+            <!-- Desktop Menu -->
+            <div class="nav-menu" id="nav-menu">
+                <a href="#beranda" class="nav-link active">Beranda</a>
+                <a href="#tentang" class="nav-link">Tentang</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#proyek" class="nav-link">Proyek</a>
+                <a href="#kontak" class="nav-link">Kontak</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
     </nav>
 
-    <section id="beranda" class="section">
-        <div class="beranda-container">
-            <img src="images/foto-kamu.jpg" alt="Foto Saya">
-            <div class="text">
-                <h1>Halo, saya <span>Abel Hazza</span></h1>
-                <p>Seorang Web Developer & App Developer yang suka membangun hal keren</p>
+
+<!-- Hero Section -->
+    <section id="beranda" class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="profile-image-container">
+                    <div class="profile-ring">
+                        <img src="images/foto-kamu.jpg" alt="Abel Hazza profile photo" class="profile-image">
+                    </div>
+                    <div class="profile-glow"></div>
+                </div>
+                
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Halo, saya <span class="highlight">Abel Hazza</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Web Developer & App Developer yang suka membangun hal keren
+                    </p>
+                    
+                    <div class="typing-container">
+                        <p id="typing-text" class="typing-text"></p>
+                    </div>
+                    
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="scrollToSection('proyek')">
+                            <i class="fas fa-code"></i>
+                            Lihat Proyek
+                        </button>
+                        <button class="btn btn-secondary" onclick="scrollToSection('kontak')">
+                            <i class="fas fa-envelope"></i>
+                            Hubungi Saya
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="scroll-indicator">
+                <div class="scroll-arrow">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
             </div>
         </div>
     </section>
 
+<!-- About Section -->
     <section id="tentang" class="section">
-        <h2>Tentang Saya</h2>
-       
-        <p>Saya adalah seorang pengembang perangkat lunak asal Indonesia yang memiliki minat besar di bidang pengembangan website dan aplikasi. Fokus utama saya saat ini adalah memperdalam pemahaman serta keterampilan teknis dalam berbagai teknologi frontend maupun backend, termasuk framework modern, integrasi database, dan praktik pengembangan yang efisien serta berorientasi pada pengguna.
-
-Seiring berkembangnya dunia teknologi global, saya berkomitmen untuk terus belajar dan mengikuti tren industri terbaru agar dapat menciptakan solusi digital yang relevan, fungsional, dan berdampak. Selain mengasah kemampuan teknis, saya juga aktif membangun portofolio sebagai bentuk nyata dari proses pembelajaran saya.</p>
-     <center><h3 id="typing" style="color: #000000;"></h3></center>
+        <div class="container">
+            <h2 class="section-title">Tentang Saya</h2>
+            
+            <div class="about-content">
+                <div class="about-card">
+                    <div class="about-text">
+                        <p class="about-description">
+                            Saya adalah seorang pengembang perangkat lunak asal Indonesia yang memiliki minat besar 
+                            di bidang pengembangan website dan aplikasi. Fokus utama saya saat ini adalah memperdalam 
+                            pemahaman serta keterampilan teknis dalam berbagai teknologi frontend maupun backend.
+                        </p>
+                        
+                        <p class="about-description">
+                            Seiring berkembangnya dunia teknologi global, saya berkomitmen untuk terus belajar dan 
+                            mengikuti tren industri terbaru agar dapat menciptakan solusi digital yang relevan, 
+                            fungsional, dan berdampak.
+                        </p>
+                        
+                        <div class="expertise-grid">
+                            <div class="expertise-item">
+                                <div class="expertise-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <h3 class="expertise-title">Frontend</h3>
+                                <p class="expertise-desc">JavaScript, HTML, CSS</p>
+                            </div>
+                            
+                            <div class="expertise-item">
+                                <div class="expertise-icon">
+                                    <i class="fas fa-server"></i>
+                                </div>
+                                <h3 class="expertise-title">Backend</h3>
+                                <p class="expertise-desc">PHP, Laravel, APIs</p>
+                            </div>
+                            
+                            <div class="expertise-item">
+                                <div class="expertise-icon">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <h3 class="expertise-title">Mobile</h3>
+                                <p class="expertise-desc">Kotlin, Android</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="skills">
-    <h2>Skills</h2>
-    <div class="skills-container">
-        <div class="skill-card" data-title="PHP" 
-             data-desc="PHP adalah bahasa scripting server‑side yang banyak dipakai untuk membangun aplikasi web dinamis.">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP">
-            <p>PHP</p>
+
+<!-- Skills Section -->
+    <section id="skills" class="section skills-section">
+        <div class="container">
+            <h2 class="section-title">Skills & Keahlian</h2>
+            
+            <div class="skills-grid">
+                <div class="skill-card" data-skill="PHP" data-level="85" data-desc="Bahasa scripting server-side untuk aplikasi web dinamis">
+                    <div class="skill-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP programming language icon">
+                    </div>
+                    <div class="skill-info">
+                        <h3 class="skill-name">PHP</h3>
+                        <div class="skill-progress">
+                            <div class="progress-bar" data-width="85"></div>
+                        </div>
+                        <span class="skill-percentage">85%</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-skill="JavaScript" data-level="80" data-desc="Bahasa pemrograman client-side untuk interaksi web">
+                    <div class="skill-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript programming language icon">
+                    </div>
+                    <div class="skill-info">
+                        <h3 class="skill-name">JavaScript</h3>
+                        <div class="skill-progress">
+                            <div class="progress-bar" data-width="80"></div>
+                        </div>
+                        <span class="skill-percentage">80%</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-skill="Kotlin" data-level="75" data-desc="Bahasa modern untuk Android & backend development">
+                    <div class="skill-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="Kotlin programming language icon">
+                    </div>
+                    <div class="skill-info">
+                        <h3 class="skill-name">Kotlin</h3>
+                        <div class="skill-progress">
+                            <div class="progress-bar" data-width="75"></div>
+                        </div>
+                        <span class="skill-percentage">75%</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-skill="MySQL" data-level="78" data-desc="Sistem manajemen basis data relasional">
+                    <div class="skill-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL database icon">
+                    </div>
+                    <div class="skill-info">
+                        <h3 class="skill-name">MySQL</h3>
+                        <div class="skill-progress">
+                            <div class="progress-bar" data-width="78"></div>
+                        </div>
+                        <span class="skill-percentage">78%</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-skill="Firebase" data-level="72" data-desc="Platform Google untuk backend realtime">
+                    <div class="skill-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase platform icon">
+                    </div>
+                    <div class="skill-info">
+                        <h3 class="skill-name">Firebase</h3>
+                        <div class="skill-progress">
+                            <div class="progress-bar" data-width="72"></div>
+                        </div>
+                        <span class="skill-percentage">72%</span>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="skill-card" data-title="JavaScript"
-             data-desc="JavaScript adalah bahasa pemrograman client‑side yang menghidupkan interaksi di web.">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
-            <p>JavaScript</p>
+    </section>
+
+
+
+<!-- Projects Section -->
+    <section id="proyek" class="section">
+        <div class="container">
+            <h2 class="section-title">Proyek Saya</h2>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/gamestore-thumbnail.png" alt="Screenshot of Game Store Website showing the main interface and features">
+                        <div class="project-overlay">
+                            <div class="project-status">
+                                <i class="fas fa-star"></i>
+                                <span>Completed</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Game Store Website</h3>
+                        <p class="project-description">
+                            Website CRUD Laravel untuk jual beli game dengan fitur katalog, keranjang, dan wishlist.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Laravel</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/voting-thumbnail.png" alt="Screenshot of Voting OSIS Website showing the main interface and features">
+                        <div class="project-overlay">
+                            <div class="project-status">
+                                <i class="fas fa-star"></i>
+                                <span>Completed</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Web Voting Pemilihan Ketua OSIS</h3>
+                        <p class="project-description">
+                            Web berbasis Laravel untuk pemilihan ketua OSIS dengan login multi-role.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Laravel</span>
+                            <span class="tech-tag">Authentication</span>
+                            <span class="tech-tag">Role Management</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card clickable" onclick="window.open('kamus/index.html')">
+                    <div class="project-image">
+                        <img src="images/kamus-thumbnail.png" alt="Screenshot of Dictionary Application showing the main interface and features">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <button class="btn-view">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    Lihat Proyek
+                                </button>
+                            </div>
+                            <div class="project-status">
+                                <i class="fas fa-star"></i>
+                                <span>Live</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Kamus Bahasa Inggris</h3>
+                        <p class="project-description">
+                            Kamus digital berbasis HTML, CSS, dan JavaScript untuk pencarian arti kata.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">API</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="skill-card" data-title="Kotlin"
-            data-desc="Kotlin adalah bahasa modern untuk Android & backend, interoperable dengan Java.">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="Kotlin">
-            <p>Kotlin</p>
+    </section>
+<!-- Contact Section -->
+    <section id="kontak" class="section contact-section">
+        <div class="container">
+            <h2 class="section-title">Hubungi Saya</h2>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3 class="contact-subtitle">Mari Berkolaborasi!</h3>
+                    <p class="contact-description">
+                        Saya terbuka untuk diskusi tentang proyek web development, mobile app, 
+                        atau kolaborasi menarik lainnya. Jangan ragu untuk menghubungi saya!
+                    </p>
+                    
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <span class="contact-text">ridhosakti7@gmail.com</span>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <span class="contact-text">+62 xxx-xxxx-xxxx</span>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <span class="contact-text">Indonesia</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nama</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Pesan</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Kirim Pesan
+                        </button>
+                    </form>
+                </div>
+            </div>
         </div>
-       <div class="skill-card" data-title="MySQL"
-             data-desc="MySQL adalah sistem manajemen basis data relasional open‑source yang populer.">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
-    <p>MySQL</p>
-    </div>
-    <div class="skill-card" data-title="Firebase"
-     data-desc="Firebase adalah platform Google untuk backend realtime, auth, storage, dan lainnya.">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase">
-    <p>Firebase</p>
-</div>
+    </section>
 
-    </div>
-</section>
-
-
-<section id="proyek" class="section">
-  <h2>Proyek</h2>
-  <div class="project-list">
-
-    <!-- Proyek Laravel (tanpa link/onclick) -->
-    <div class="project-card">
-        <img src="images/gamestore-thumbnail.png" alt="Game Store Thumbnail" class="project-thumbnail">
-      <h3>Game Store Website</h3>
-      <p>Website CRUD Laravel sederhana untuk jual beli game dengan fitur katalog, keranjang, dan wishlist.</p>
-    </div>
-
-    <div class="project-card">
-              <img src="images/voting-thumbnail.png" alt="Voting OSIS Thumbnail" class="project-thumbnail">
-      <h3>Web Voting Pemilihan Ketua OSIS</h3>
-      <p>Web berbasis Laravel untuk pemilihan ketua OSIS dengan login multi-role.</p>
-    </div>
-
-    <!-- Proyek HTML statis (klikable) -->
-    <div class="project-card clickable" onclick="window.open('kamus/index.html', '_blank')">
-      <img src="images/kamus-thumbnail.png" alt="Kamus Thumbnail" class="project-thumbnail">
-      <h3>Kamus Bahasa Inggris</h3>
-      <p>Kamus digital berbasis HTML, CSS, dan JavaScript yang memungkinkan pencarian arti kata dalam Bahasa Inggris.</p>
-    </div>
-
-  </div>
-</section>
-
-
-
-    <footer>
-        <p>© 2025 Abel Hazza | Dibuat dengan niat dan semangat belajar</p>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">
+                © 2025 Abel Hazza | Dibuat dengan niat dan semangat belajar
+            </p>
+        </div>
     </footer>
-<script>
-  const texts = [
-    "🚀 Sedang membuka project freelance kecil!",
-    "💻 Terbuka untuk kolaborasi Laravel & Android",
-    "📬 Hubungi via email atau Instagram!"
-  ];
-  let i = 0, j = 0, currentText = "", isDeleting = false;
 
-  function type() {
-    if (i < texts.length) {
-      if (!isDeleting && j <= texts[i].length) {
-        currentText = texts[i].slice(0, j++);
-      } else if (isDeleting && j >= 0) {
-        currentText = texts[i].slice(0, j--);
-      }
+    <!-- Skill Modal -->
+    <div id="skill-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-body">
+                <div class="modal-icon">
+                    <img id="modal-skill-icon" src="" alt="">
+                </div>
+                <h3 id="modal-skill-name"></h3>
+                <div class="modal-progress">
+                    <div class="modal-progress-bar" id="modal-progress"></div>
+                </div>
+                <p id="modal-skill-desc"></p>
+            </div>
+        </div>
+    </div>
 
-      document.getElementById("typing").innerText = currentText;
-
-      if (j === texts[i].length) isDeleting = true;
-      if (isDeleting && j === 0) {
-        isDeleting = false;
-        i = (i + 1) % texts.length;
-      }
-
-      setTimeout(type, isDeleting ? 60 : 100);
-    }
-  }
-
-  type();
-</script>
-
-    <script src="script.js"></script>
-    <!-- Modal Overlay -->
-<div id="skill-modal" class="modal">
-  <div class="modal-content">
-    <span id="modal-close">&times;</span>
-    <h3 id="modal-title"></h3>
-    <p id="modal-desc"></p>
-  </div>
-</div>
-<script>
-  // Animasi saat scroll
-  const skillCards = document.querySelectorAll(".skill-card");
-  
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-      }
-    });
-  }, { threshold: 0.2 });
-  
-  skillCards.forEach(card => {
-    observer.observe(card);
-  });
-  </script>
+<script src="script.js"></script>
 </body>
 </html>
